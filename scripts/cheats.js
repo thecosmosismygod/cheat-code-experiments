@@ -154,7 +154,7 @@ const cheatList = [
         Vars.ui.showInfoPopup("Mini Rumbling!", 3, 1, 1, 1, 1, 1)
     }),
 
-    //    Radially launch toxopids
+    //    Radially launch corvus
     newCheat("rumbling2", "therumblingis", 1, () => {
         let playerUnit = Vars.player.unit()
 
@@ -170,7 +170,39 @@ const cheatList = [
         
         Vars.ui.showInfoPopup("Mini own Rumbling!", 3, 1, 1, 1, 1, 1)
     }),
+    //    Radially launch flies
+    newCheat("rumbling", "fly", 1, () => {
+        let playerUnit = Vars.player.unit()
 
+        let count = 6
+        for (let i = 0; i < count; i++) {
+            let position = new Vec2(playerUnit.x, playerUnit.y)
+            let positionOffset = new Vec2(Mathf.random(-50, 50), Mathf.random(-50, 50))
+            let toxopid = UnitTypes.quad.spawn(position.add(positionOffset), playerUnit.team)
+            let velocityVec = new Vec2(positionOffset.x, positionOffset.y).nor().scl(10)
+            toxopid.apply(StatusEffects.burning, 100000 * 60)
+            toxopid.vel.add(velocityVec)
+        }
+        
+        Vars.ui.showInfoPopup("Mini own Rumbling!", 3, 1, 1, 1, 1, 1)
+    }),
+
+    //    Radially launch boats
+    newCheat("rumbling2", "boat", 1, () => {
+        let playerUnit = Vars.player.unit()
+
+        let count = 6
+        for (let i = 0; i < count; i++) {
+            let position = new Vec2(playerUnit.x, playerUnit.y)
+            let positionOffset = new Vec2(Mathf.random(-50, 50), Mathf.random(-50, 50))
+            let toxopid = UnitTypes.cyerce.spawn(position.add(positionOffset), playerUnit.team)
+            let velocityVec = new Vec2(positionOffset.x, positionOffset.y).nor().scl(10)
+            toxopid.apply(StatusEffects.burning, 100000 * 60)
+            toxopid.vel.add(velocityVec)
+        }
+        
+        Vars.ui.showInfoPopup("Mini own Rumbling!", 3, 1, 1, 1, 1, 1)
+    }),
     //    Deletes every odd unit except the player TODO add a way to reverse this using the blip
     newCheat("thanos snap", "iaminevitable", 1, () => {
         let playerUnit = Vars.player.unit()
