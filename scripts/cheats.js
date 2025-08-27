@@ -206,7 +206,7 @@ const cheatList = [
 
 
     //    Radially launch corvus
-    newCheat("rumbling2", "therumblingis", 1, () => {
+    newCheat("rumbling2", "therumblingis2", 1, () => {
         let playerUnit = Vars.player.unit()
 
         let count = 6
