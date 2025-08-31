@@ -1,4 +1,4 @@
-# Version 1.7
+# Version 1.8
 The PC version now uses the same UI input as mobile.<br>
 This is to avoid confusion and other problems, such as hotkeys activating while typing.<br>
 Added more cheats: <br>
@@ -21,6 +21,7 @@ A mod that adds extremely broken power ups that are activated by entering specif
 | Konami           | Multiplies player health by 30                                                                            | "wwssadadba"                                    |
 | God Mode         | Player will be temporarily immune to damage                                                               | "loremipsumdolorsitamet"                        |
 | Rumbling         | Launches burning Toxopids around you                                                                      | "therumblingishere"                             |
+| Rumbling2        | Same thing, but with Corvuses (contributed by thecosmosismygod)                                           | "thesecondrumbling"                             |
 | Thanos Snap      | Erases half of the units on the map                                                                       | "iaminevitable"                                 |
 | Time Stop        | Time slows down to a halt (currently disabled on mobile)                                                  | "zawarudo"                                      |
 | For Honor        | Destroys player unit (contributed by Dryehm)                                                              | "thisisforhonor"                                |
