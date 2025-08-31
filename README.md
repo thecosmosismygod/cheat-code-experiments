@@ -24,7 +24,7 @@ A mod that adds extremely broken power ups that are activated by entering specif
 | Rumbling         | Launches burning Toxopids around you                                                                      | "therumblingishere"                             |
 | Rumbling2        | Same thing, but with Corvuses (contributed by thecosmosismygod)                                           | "thesecondrumbling"                             |
 | Thanos Snap      | Erases half of the units on the map                                                                       | "iaminevitable"                                 |
-| Time Stop        | Time slows down to a halt (currently disabled on mobile)                                                  | "zawarudo"                                      |
+| Time Stop        | Time slows down to a halt (broken on mobile)                                                              | "zawarudo"                                      |
 | For Honor        | Destroys player unit (contributed by Dryehm)                                                              | "thisisforhonor"                                |
 | DOGRESIDUE       | Fills core with every item (idea by Mindustryenjoyer)                                                     | "dogresidue"                                    |
 | The Third Impact | Progressively turns every unit into steaming hot orange fanta                                             | "tumblingdown" or "come sweet death"            |
