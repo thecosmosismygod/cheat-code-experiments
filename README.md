@@ -1,10 +1,11 @@
-# Version 1.8
+# Version 1.7.1
 The PC version now uses the same UI input as mobile.<br>
 This is to avoid confusion and other problems, such as hotkeys activating while typing.<br>
 Added more cheats: <br>
 - Atomic (suggested by BlueDragonInfinity)
 - Creative Power (replaces editor mode cheat)
 - Skip Survival
+- Rumbling2 (contributed by thecosmosismygod)
 
 # Cheat Codes Mod
 
