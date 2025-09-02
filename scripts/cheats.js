@@ -262,7 +262,7 @@ const cheatList = [
         for (let i = 0; i < count; i++) {
             let position = new Vec2(playerUnit.x, playerUnit.y)
             let positionOffset = new Vec2(Mathf.random(-50, 50), Mathf.random(-50, 50))
-            let toxopid = UnitTypes.eclipse.spawn(position.add(positionOffset), playerUnit.team)
+            let toxopid = UnitTypes.aegis.spawn(position.add(positionOffset), playerUnit.team)
             let velocityVec = new Vec2(positionOffset.x, positionOffset.y).nor().scl(10)
         //    toxopid.apply(StatusEffects.burning, 100000 * 60)
             toxopid.vel.add(velocityVec)
@@ -279,7 +279,7 @@ const cheatList = [
         for (let i = 0; i < count; i++) {
             let position = new Vec2(playerUnit.x, playerUnit.y)
             let positionOffset = new Vec2(Mathf.random(-50, 50), Mathf.random(-50, 50))
-            let toxopid = UnitTypes.sei.spawn(position.add(positionOffset), playerUnit.team)
+            let toxopid = UnitTypes.omura.spawn(position.add(positionOffset), playerUnit.team)
             let velocityVec = new Vec2(positionOffset.x, positionOffset.y).nor().scl(10)
           //  toxopid.apply(StatusEffects.burning, 100000 * 60)
             toxopid.vel.add(velocityVec)
