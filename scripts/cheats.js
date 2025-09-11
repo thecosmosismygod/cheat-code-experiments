@@ -136,6 +136,138 @@ const cheatList = [
 
         Vars.ui.showInfoPopup("God mode activated for 60 seconds!", 3, 1, 1, 1, 1, 1)
     }),
+        // === Erekir T4 Units ===
+
+    // Vanquish (T4 Tank)
+    newCheat("erekir vanquish", "erekt4rumble1", 1, () => {
+        let playerUnit = Vars.player.unit();
+
+        let count = 6;
+        for (let i = 0; i < count; i++) {
+            let position = new Vec2(playerUnit.x, playerUnit.y);
+            let offset = new Vec2(Mathf.random(-50, 50), Mathf.random(-50, 50));
+            let vanquish = UnitTypes.vanquish.spawn(position.add(offset), playerUnit.team);
+            let velocityVec = new Vec2(offset.x, offset.y).nor().scl(10);
+            vanquish.vel.add(velocityVec);
+        }
+
+        Vars.ui.showInfoPopup("Vanquish storm unleashed!", 3, 1, 1, 1, 1, 1);
+    }),
+
+    // Tecta (T4 Mech)
+    newCheat("erekir tecta", "erekt4rumble2", 1, () => {
+        let playerUnit = Vars.player.unit();
+
+        let count = 6;
+        for (let i = 0; i < count; i++) {
+            let position = new Vec2(playerUnit.x, playerUnit.y);
+            let offset = new Vec2(Mathf.random(-50, 50), Mathf.random(-50, 50));
+            let tecta = UnitTypes.tecta.spawn(position.add(offset), playerUnit.team);
+            let velocityVec = new Vec2(offset.x, offset.y).nor().scl(10);
+            tecta.vel.add(velocityVec);
+        }
+
+        Vars.ui.showInfoPopup("Tecta walkers deployed!", 3, 1, 1, 1, 1, 1);
+    }),
+
+    // Quell (T4 Air)
+    newCheat("erekir quell", "erekt4rumble3", 1, () => {
+        let playerUnit = Vars.player.unit();
+
+        let count = 6;
+        for (let i = 0; i < count; i++) {
+            let position = new Vec2(playerUnit.x, playerUnit.y);
+            let offset = new Vec2(Mathf.random(-50, 50), Mathf.random(-50, 50));
+            let quell = UnitTypes.quell.spawn(position.add(offset), playerUnit.team);
+            let velocityVec = new Vec2(offset.x, offset.y).nor().scl(10);
+            quell.vel.add(velocityVec);
+        }
+
+        Vars.ui.showInfoPopup("Quell squadrons incoming!", 3, 1, 1, 1, 1, 1);
+    }),
+
+    // Incite (T4 Core Unit)
+    newCheat("erekir incite", "erekt4rumble4", 1, () => {
+        let playerUnit = Vars.player.unit();
+
+        let count = 6;
+        for (let i = 0; i < count; i++) {
+            let position = new Vec2(playerUnit.x, playerUnit.y);
+            let offset = new Vec2(Mathf.random(-50, 50), Mathf.random(-50, 50));
+            let incite = UnitTypes.incite.spawn(position.add(offset), playerUnit.team);
+            let velocityVec = new Vec2(offset.x, offset.y).nor().scl(10);
+            incite.vel.add(velocityVec);
+        }
+
+        Vars.ui.showInfoPopup("Incite unleashed!", 3, 1, 1, 1, 1, 1);
+    }),
+
+        // === Erekir T5 Units ===
+
+    // Conquer (T5 Tank)
+    newCheat("erekir conquer", "erekrumbling1", 1, () => {
+        let playerUnit = Vars.player.unit();
+
+        let count = 6;
+        for (let i = 0; i < count; i++) {
+            let position = new Vec2(playerUnit.x, playerUnit.y);
+            let positionOffset = new Vec2(Mathf.random(-50, 50), Mathf.random(-50, 50));
+            let conquer = UnitTypes.conquer.spawn(position.add(positionOffset), playerUnit.team);
+            let velocityVec = new Vec2(positionOffset.x, positionOffset.y).nor().scl(10);
+            conquer.vel.add(velocityVec);
+        }
+
+        Vars.ui.showInfoPopup("Conquerors unleashed!", 3, 1, 1, 1, 1, 1);
+    }),
+
+    // Collaris (T5 Mech)
+    newCheat("erekir collaris", "erekrumbling2", 1, () => {
+        let playerUnit = Vars.player.unit();
+
+        let count = 6;
+        for (let i = 0; i < count; i++) {
+            let position = new Vec2(playerUnit.x, playerUnit.y);
+            let positionOffset = new Vec2(Mathf.random(-50, 50), Mathf.random(-50, 50));
+            let collaris = UnitTypes.collaris.spawn(position.add(positionOffset), playerUnit.team);
+            let velocityVec = new Vec2(positionOffset.x, positionOffset.y).nor().scl(10);
+            collaris.vel.add(velocityVec);
+        }
+
+        Vars.ui.showInfoPopup("Collaris army unleashed!", 3, 1, 1, 1, 1, 1);
+    }),
+
+    // Disrupt (T5 Air)
+    newCheat("erekir disrupt", "erekrumbling3", 1, () => {
+        let playerUnit = Vars.player.unit();
+
+        let count = 6;
+        for (let i = 0; i < count; i++) {
+            let position = new Vec2(playerUnit.x, playerUnit.y);
+            let positionOffset = new Vec2(Mathf.random(-50, 50), Mathf.random(-50, 50));
+            let disrupt = UnitTypes.disrupt.spawn(position.add(positionOffset), playerUnit.team);
+            let velocityVec = new Vec2(positionOffset.x, positionOffset.y).nor().scl(10);
+            disrupt.vel.add(velocityVec);
+        }
+
+        Vars.ui.showInfoPopup("Disruptors descend!", 3, 1, 1, 1, 1, 1);
+    }),
+
+    // Emanate (T5 Core Unit)
+    newCheat("erekir emanate", "erekrumbling4", 1, () => {
+        let playerUnit = Vars.player.unit();
+
+        let count = 6;
+        for (let i = 0; i < count; i++) {
+            let position = new Vec2(playerUnit.x, playerUnit.y);
+            let positionOffset = new Vec2(Mathf.random(-50, 50), Mathf.random(-50, 50));
+            let emanate = UnitTypes.emanate.spawn(position.add(positionOffset), playerUnit.team);
+            let velocityVec = new Vec2(positionOffset.x, positionOffset.y).nor().scl(10);
+            emanate.vel.add(velocityVec);
+        }
+
+        Vars.ui.showInfoPopup("Emanates rise!", 3, 1, 1, 1, 1, 1);
+    }),
+
 
     //    Radially launch toxopids
     newCheat("rumbling", "therumblingishere", 1, () => {
