@@ -389,7 +389,7 @@ const cheatList = [
         //    Radially launch flies
     newCheat("rumbling", "flyx1", 1, () => {
         let playerUnit = Vars.player.unit()
-
+        
         let count = 6
         for (let i = 0; i < count; i++) {
             let position = new Vec2(playerUnit.x, playerUnit.y)
@@ -407,7 +407,7 @@ const cheatList = [
     newCheat("rumbling2", "flyx2", 1, () => {
         let playerUnit = Vars.player.unit()
 
-        let count = 6
+        let count = 6;
         for (let i = 0; i < count; i++) {
             let position = new Vec2(playerUnit.x, playerUnit.y)
             let positionOffset = new Vec2(Mathf.random(-50, 50), Mathf.random(-50, 50))
@@ -463,7 +463,7 @@ const cheatList = [
         for (let i = 0; i < count; i++) {
             let position = new Vec2(playerUnit.x, playerUnit.y);
             let positionOffset = new Vec2(Mathf.random(-50, 50), Mathf.random(-50, 50));
-            let conquer = UnitTypes.annectodon.spawn(position.add(positionOffset), playerUnit.team);
+            let conquer = UnitTypes.Annectodon.spawn(position.add(positionOffset), playerUnit.team);
             let velocityVec = new Vec2(positionOffset.x, positionOffset.y).nor().scl(10);
             conquer.vel.add(velocityVec);
         }
