@@ -419,6 +419,55 @@ const cheatList = [
         
         Vars.ui.showInfoPopup("Mini own Rumbling!", 3, 1, 1, 1, 1, 1)
     }),
+        // Incite (T4 Core Unit)
+    newCheat("erekire", "ast", 1, () => {
+        let playerUnit = Vars.player.unit();
+
+        let count = 6;
+        for (let i = 0; i < count; i++) {
+            let position = new Vec2(playerUnit.x, playerUnit.y);
+            let offset = new Vec2(Mathf.random(-50, 50), Mathf.random(-50, 50));
+            let incite = UnitTypes.everse.spawn(position.add(offset), playerUnit.team);
+            let velocityVec = new Vec2(offset.x, offset.y).nor().scl(10);
+            incite.vel.add(velocityVec);
+        }
+
+        Vars.ui.showInfoPopup("Incite unleashed!", 3, 1, 1, 1, 1, 1);
+    }),
+
+        // === Erekir T5 Units ===
+
+        // Incite (T4 Core Unit)
+    newCheat("asthosus", "ast1", 1, () => {
+        let playerUnit = Vars.player.unit();
+
+        let count = 6;
+        for (let i = 0; i < count; i++) {
+            let position = new Vec2(playerUnit.x, playerUnit.y);
+            let offset = new Vec2(Mathf.random(-50, 50), Mathf.random(-50, 50));
+            let incite = UnitTypes.UnitTypes.expound.spawn(position.add(offset), playerUnit.team);
+            let velocityVec = new Vec2(offset.x, offset.y).nor().scl(10);
+            incite.vel.add(velocityVec);
+        }
+
+        Vars.ui.showInfoPopup("Incite unleashed!", 3, 1, 1, 1, 1, 1);
+    }),
+
+        // === Erekir T5 Units ===
+
+    // Conquer (T5 Tank)
+    newCheat("astho", "ast2", 1, () => {
+        let playerUnit = Vars.player.unit();
+
+        let count = 6;
+        for (let i = 0; i < count; i++) {
+            let position = new Vec2(playerUnit.x, playerUnit.y);
+            let positionOffset = new Vec2(Mathf.random(-50, 50), Mathf.random(-50, 50));
+            let conquer = UnitTypes.annectodon.spawn(position.add(positionOffset), playerUnit.team);
+            let velocityVec = new Vec2(positionOffset.x, positionOffset.y).nor().scl(10);
+            conquer.vel.add(velocityVec);
+        }
+
     //    Deletes every odd unit except the player TODO add a way to reverse this using the blip
     newCheat("thanos snap", "iaminevitable", 1, () => {
         let playerUnit = Vars.player.unit()
