@@ -467,7 +467,7 @@ const cheatList = [
             let velocityVec = new Vec2(positionOffset.x, positionOffset.y).nor().scl(10);
             conquer.vel.add(velocityVec);
         }
-
+}),
     //    Deletes every odd unit except the player TODO add a way to reverse this using the blip
     newCheat("thanos snap", "iaminevitable", 1, () => {
         let playerUnit = Vars.player.unit()
