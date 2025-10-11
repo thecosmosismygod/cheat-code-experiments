@@ -457,6 +457,14 @@ const cheatList = [
 
     // Conquer (T5 Tank)
     newCheat("astho", "ast2", 1, () => {
+        const u = Vars.content.getByName(ContentType.unit, "Asthosus-Annectodon");
+if(u){
+    Vars.player.unit().spawn(u, Vars.player.x, Vars.player.y);
+    print("Spawned " + u.name);
+}else{
+    print("Unit not found!");
+}
+
         let playerUnit = Vars.player.unit();
 
         let count = 6;
