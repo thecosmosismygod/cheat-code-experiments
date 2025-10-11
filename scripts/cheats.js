@@ -455,7 +455,31 @@ const cheatList = [
     newCheat("astho", "ast2", 1, () => {
     let playerUnit = Vars.player.unit();
     let count = 6;
-    let unit = Vars.content.getByName(ContentType.unit, "Asthosus-Annectodon");
+    let unit = Vars.content.getByName(ContentType.unit, "asthosus-annectodon");
+
+    if (!unit) {
+       Vars.ui.showInfoPopup("[cheats.js] Unit Asthosus-Annectodon not found!", 3, 1, 1, 1, 1, 1);
+        return;
+    }
+
+    for (let i = 0; i < count; i++) {
+        let position = new Vec2(playerUnit.x, playerUnit.y);
+        let offset = new Vec2(Mathf.random(-50, 50), Mathf.random(-50, 50));
+
+        // spawn unit via Mod name
+        let spawned = unit.spawn(playerUnit.team, position.add(offset).x, position.add(offset).y);
+
+        // give it some velocity (optional)
+        let vel = new Vec2(offset.x, offset.y).nor().scl(10);
+        spawned.vel.add(vel);
+    }
+
+    print("[cheats.js] ✅ Spawned " + count + "x Asthosus-Annectodon");
+}),
+    newCheat("astho", "asto1", 1, () => {
+    let playerUnit = Vars.player.unit();
+    let count = 6;
+    let unit = Vars.content.getByName(ContentType.unit, "annectodon");
 
     if (!unit) {
        Vars.ui.showInfoPopup("[cheats.js] Unit Asthosus-Annectodon not found!", 3, 1, 1, 1, 1, 1);
