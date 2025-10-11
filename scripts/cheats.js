@@ -452,18 +452,37 @@ const cheatList = [
 
         Vars.ui.showInfoPopup("Incite unleashed!", 3, 1, 1, 1, 1, 1);
     }),
+    newCheat("astho", "ast2", 1, () => {
+    let playerUnit = Vars.player.unit();
+    let count = 6;
+    let unit = Vars.content.getByName(ContentType.unit, "Asthosus-Annectodon");
+
+    if (!unit) {
+       Vars.ui.showInfoPopup("[cheats.js] Unit Asthosus-Annectodon not found!", 3, 1, 1, 1, 1, 1);
+        return;
+    }
+
+    for (let i = 0; i < count; i++) {
+        let position = new Vec2(playerUnit.x, playerUnit.y);
+        let offset = new Vec2(Mathf.random(-50, 50), Mathf.random(-50, 50));
+
+        // spawn unit via Mod name
+        let spawned = unit.spawn(playerUnit.team, position.add(offset).x, position.add(offset).y);
+
+        // give it some velocity (optional)
+        let vel = new Vec2(offset.x, offset.y).nor().scl(10);
+        spawned.vel.add(vel);
+    }
+
+    print("[cheats.js] ✅ Spawned " + count + "x Asthosus-Annectodon");
+}),
+
 
         // === Erekir T5 Units ===
 
     // Conquer (T5 Tank)
-    newCheat("astho", "ast2", 1, () => {
+    newCheat("astho", "ast22", 1, () => {
         const u = Vars.content.getByName(ContentType.unit, "Asthosus-Annectodon");
-if(u){
-    Vars.player.unit().spawn(u, Vars.player.x, Vars.player.y);
-    print("Spawned " + u.name);
-}else{
-    print("Unit not found!");
-}
 
         let playerUnit = Vars.player.unit();
 
