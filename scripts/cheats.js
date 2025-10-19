@@ -757,7 +757,7 @@ const cheatList = [
         }
 
         print("✅ Spawned " + count + "x asthosus-annectodon");
-    });
+    };
 }),
 
 
