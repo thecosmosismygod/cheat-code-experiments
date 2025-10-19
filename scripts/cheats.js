@@ -741,7 +741,7 @@ const cheatList = [
     }),
 
     // === Asthosus Unit Spawn Cheat ===
-newCheat("astho", "ast2", 1, () => {
+newCheat("astho", "datest", 1, () => {
     let playerUnit = Vars.player.unit();
     let unit = Vars.content.getByName(ContentType.unit, "asthosus-annectodon");
     
