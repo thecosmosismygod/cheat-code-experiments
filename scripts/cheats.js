@@ -740,33 +740,38 @@ const cheatList = [
         }
     }),
 
-    newCheat("astho", "ast2", 1, () => {
-        let playerUnit = Vars.player.unit();
-        let unit = Vars.content.getByName(ContentType.unit, "asthosus-annectodon");
-        
-        if (!unit) {
-            print("❌ Unit 'asthosus-annectodon' not found!");
-            return;
-        }
+    // === Asthosus Unit Spawn Cheat ===
+newCheat("astho", "ast2", 1, () => {
+    let playerUnit = Vars.player.unit();
+    let unit = Vars.content.getByName(ContentType.unit, "asthosus-annectodon");
+    
+    if (!unit) {
+        Vars.ui.showInfoPopup("❌ Unit 'asthosus-annectodon' not found!", 3, 1, 1, 1, 1, 1);
+        return;
+    }
 
-        let count = 6;
-        for (let i = 0; i < count; i++) {
-            let offset = new Vec2(Mathf.random(-50, 50), Mathf.random(-50, 50));
-            let spawned = unit.spawn(playerUnit.team(), playerUnit.x + offset.x, playerUnit.y + offset.y);
-            spawned.vel.set(offset.nor().scl(10));
-        }
+    let count = 6;
+    for (let i = 0; i < count; i++) {
+        let offset = new Vec2(Mathf.random(-50, 50), Mathf.random(-50, 50));
+        let spawned = unit.spawn(playerUnit.team(), playerUnit.x + offset.x, playerUnit.y + offset.y);
+        spawned.vel.set(offset.nor().scl(10));
+    }
 
-        print("✅ Spawned " + count + "x asthosus-annectodon");
-    };
-})
-
-
+    print("✅ Spawned " + count + "x asthosus-annectodon");
+}),
 ] // <--- Ende der cheatList
 
 // ============ Asthosus Mod Loader Helper ============
+Events.on(ClientLoadEvent, e => {
+    print("[cheats.js] Mods loaded — listing all units...");
 
+    for (let u of Vars.content.units()) {
+        print(u.name + " (" + (u.minfo?.mod?.name ?? "core") + ")");
+    }
+});
 
 module.exports = {
     newCheat: newCheat,
     cheatList: cheatList,
 }
+
