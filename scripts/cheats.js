@@ -764,15 +764,7 @@ const cheatList = [
 ] // <--- Ende der cheatList
 
 // ============ Asthosus Mod Loader Helper ============
-Events.on(ClientLoadEvent, e => {
-    print("[cheats] Mods loaded — listing all units...");
 
-    // Debug-Ausgabe aller Units (zeigt auch Mod-Units)
-    for (let u of Vars.content.units()) {
-        Vars.ui.showInfoPopup(u.name + " (" + (u.minfo?.mod?.name ?? "core") + ")");
-    }
-
-}
 
 module.exports = {
     newCheat: newCheat,
